@@ -1,0 +1,25 @@
+type Float : f64
+{
+	π     = 
+	pi    = 3.141592653589793;
+	e     = 2.718281828459045;
+	sqrt2 = 1.414213562373095;
+	sqrt3 = 1.732050807568877;
+}
+
+enum Even : (n: i32) -> 2n;
+enum Odd  : (n: i32) -> 2n + 1;
+
+runtime do
+{
+	let r : Float;
+	let d := 2r;
+	let A : () = Float.pi * r^2;
+	let C : () = Float.pi * d;
+	
+	r = 4;
+	print("Radius:        {}\n", r);
+	print("Diameter:      {}\n", d);
+	print("Area:          {}\n", A);
+	print("Circumference: {}\n", C);
+}
